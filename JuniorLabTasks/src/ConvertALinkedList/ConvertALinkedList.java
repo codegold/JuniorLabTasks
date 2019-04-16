@@ -29,10 +29,10 @@ public class ConvertALinkedList {
     public static String stringify(Node list) {
         String result = null;
         result = new String();
-        Node t = list;                         //Getting lin to a first elem
-        while ((t != null)) {                                //While elem is
-            result += t.getData() + " -> ";                 //Print its data
-            t = t.getNext();                              //And move to next
+        Node n = list;                         //Getting lin to a first elem
+        while ((n != null)) {                                //While elem is
+            result += n.getData() + " -> ";                 //Print its data
+            n = n.getNext();                              //And move to next
         }
         return result + "null";
     }
