@@ -18,9 +18,17 @@ public class Transfer {
 
             pigStr += newString + " ";
         }
-        pigStr = pigStr.substring(0, pigStr.length()-1);
+        pigStr = pigStr.substring(0, pigStr.length() - 1);
 
         return pigStr;
+    }
+
+    public static String reverseIt(String str) {
+        String reversedString = "";
+        for (int i = 0; i < str.length(); i++) {
+            reversedString = str.charAt(i) + reversedString;
+        }
+        return reversedString;
     }
 //
 //    public static String testX(String str) {
@@ -41,6 +49,7 @@ public class Transfer {
         System.out.println(pigIt("Pig latin is cool"));
         System.out.println(pigIt("Hello world !"));
         //System.out.println(testX("Pig latin is cool"));
+        System.out.println(reverseIt("Hello."));
     }
 }
 
