@@ -18,26 +18,28 @@ import java.util.concurrent.atomic.AtomicReferenceArray;
 
 public class MSS {
     public static void main(String[] args) {
-        printArray(sqInRect(6, 6));
-        printArray(sqInRect(5, 5));
-        printArray(sqInRect(3, 5));
         printArray(sqInRect(5, 3));
-        printArray(sqInRect(20, 14));
-        printArray(sqInRect(240, 32));
+        System.out.println();
+        printArray(sqInRect(3, 5));
+        System.out.println();
+        printArray(sqInRect(5, 5));
+        System.out.println();
         printArray(sqInRect(135, 85));
     }
 
 
     public static void printArray(int[] arr) {
+        StringBuilder sb = new StringBuilder();
         try {
             for (int i : arr) {
-                System.out.println(i + " ");
+                sb.append(arr[i] + " ");
             }
             System.out.println();
         } catch (NullPointerException e) {
             System.out.println("null");
         }
     }
+
 
     public static int[] sqInRect(int lng, int wdth) {
         ArrayList<Integer> integers = new ArrayList<>();
@@ -46,11 +48,11 @@ public class MSS {
                 if (lng > wdth) {
                     integers.add(wdth);
                     lng -= wdth;
-                }else {
-                    if(lng < wdth) {
+                } else {
+                    if (lng < wdth) {
                         integers.add(lng);
                         wdth -= lng;
-                    }else{
+                    } else {
                         integers.add(wdth);
                         break;
                     }
@@ -59,10 +61,11 @@ public class MSS {
         } else return null;
 
         int i = 0;
-        int[]arr = new int[integers.size()];
-        for(Integer integer : integers) {
+        int[] arr = new int[integers.size()];
+        for (Integer integer : integers) {
             arr[i++] = integer;
         }
         return arr;
     }
+
 }
