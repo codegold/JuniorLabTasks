@@ -24,7 +24,7 @@ public class MSS {
         System.out.println();
         printArray(sqInRect(5, 5));
         System.out.println();
-        printArray(sqInRect(135, 85));
+        //printArray(sqInRect(135, 85));
     }
 
 
